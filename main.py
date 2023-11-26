@@ -93,7 +93,7 @@ def main():
     cache_size = 32
     block_size = 16
     num_blocks = int(input("Enter the number of memory blocks: "))
-    cache = Cache(cache_size, block_size)
+    cache = Cache(num_blocks)
 
     # Test Case A: Sequential sequence
     test_case_a = [i % (2 * num_blocks) for i in range(4 * num_blocks)]
