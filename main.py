@@ -8,30 +8,37 @@ class CacheEntry:
         self.mru_counter = 0
 
 class Cache:
-    def __init__(self, num_blocks, block_size):
+    def __init__(self, num_blocks):
         self.num_blocks = num_blocks
-        self.block_size = block_size
         self.entries = [CacheEntry() for _ in range(num_blocks)]
         self.mru_counter = 0
 
     def access(self, address):
-        block_offset = address % self.block_size
-        block_address = address // self.block_size
-        index = block_address % self.num_blocks
+        # Check for cache hit
+        for entry in self.entries:
+            if entry.valid and entry.tag == address:
+                entry.mru_counter = self.mru_counter
+                self.mru_counter += 1
+                return "hit"
 
-        if not self.entries[index].valid or self.entries[index].tag != block_address:
-            # Cache miss
-            self.entries[index].valid = True
-            self.entries[index].tag = block_address
-            self.entries[index].mru_counter = self.mru_counter
+        # Cache miss
+        # Find the empty block if available
+        empty_block = next((entry for entry in self.entries if not entry.valid), None)
+        if empty_block is not None:
+            empty_block.valid = True
+            empty_block.tag = address
+            empty_block.mru_counter = self.mru_counter
             self.mru_counter += 1
             return "miss"
-        else:
-            # Cache hit
-            self.entries[index].mru_counter = self.mru_counter
-            self.mru_counter += 1
-            return "hit"
 
+        # If no empty blocks, find the most recently used block
+        mru_block = max(self.entries, key=lambda entry: entry.mru_counter)
+        mru_block.valid = True
+        mru_block.tag = address
+        mru_block.mru_counter = self.mru_counter
+        self.mru_counter += 1
+        return "miss"
+    
     def display(self):
         for i, entry in enumerate(self.entries):
             print(f"Cache Block {i}: Valid={entry.valid}, Tag={entry.tag}, MRU Counter={entry.mru_counter}")
