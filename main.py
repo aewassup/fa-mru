@@ -96,7 +96,7 @@ def main():
     cache = Cache(num_blocks)
 
     # Test Case A: Sequential sequence
-    test_case_a = [i % (2 * num_blocks) for i in range(4 * num_blocks)]
+    test_case_a = list(range(2 * num_blocks)) * 4
     hits_a, misses_a = run_simulation(cache, test_case_a, animated_trace=True)
     statistics_a = calculate_statistics(len(test_case_a), hits_a, misses_a)
 
