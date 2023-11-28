@@ -8,7 +8,7 @@ This is a cache simulator written in Python using the `ttkbootstrap` library. Th
 
 Before running this code, you must first install the `ttkbootstrap` library. You can do this by running the following command in your terminal:
 
-bash pip install ttkbootstrap
+``` pip install ttkbootstrap ```
 
 ## Running the Simulator
 
