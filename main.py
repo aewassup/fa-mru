@@ -105,43 +105,50 @@ def run_simulation(cache, memory_accesses, animated_trace=False, test_case_title
  return cache_hits, cache_misses
 
 
-
 def main():
-   cache_size = 32
-   block_size = 16
-   num_blocks = int(input("Enter the number of memory blocks: "))
-   cache_a = Cache(num_blocks)
-   cache_b = Cache(num_blocks)
-   cache_c = Cache(num_blocks)
+  cache_size = 32
+  block_size = 16
+  num_blocks = int(input("Enter the number of memory blocks: "))
+  cache_a = Cache(num_blocks)
+  cache_b = Cache(num_blocks)
+  cache_c = Cache(num_blocks)
 
-   # Test Case A: Sequential sequence
-   test_case_a = list(range(2 * num_blocks)) * 4
-   hits_a, misses_a = run_simulation(cache_a, test_case_a, animated_trace=True, test_case_title="Test Case A: Sequential sequence", filename="simulation_trace_a.txt")
-   statistics_a = calculate_statistics(len(test_case_a), hits_a, misses_a)
+  # Test Case A: Sequential sequence
+  test_case_a = list(range(2 * num_blocks)) * 4
+  animated_trace_a = input("Do you want to animate trace for Test Case A? (yes/no): ") == "yes"
 
-   # Test Case B: Random sequence
-   test_case_b = random.sample(range(4 * num_blocks), 4 * num_blocks)
-   hits_b, misses_b = run_simulation(cache_b, test_case_b, test_case_title="Test Case B: Random sequence", filename="simulation_trace_b.txt")
-   statistics_b = calculate_statistics(len(test_case_b), hits_b, misses_b)
+  # Test Case B: Random sequence
+  test_case_b = random.sample(range(4 * num_blocks), 4 * num_blocks)
+  animated_trace_b = input("Do you want to animate trace for Test Case B? (yes/no): ") == "yes"
 
-   # Test Case C: Mid-repeat blocks
-   mid_repeat = [i % num_blocks for i in range(num_blocks)] * 2 + [i for i in range(num_blocks, 2 * num_blocks)] * 4
-   test_case_c = mid_repeat * 4
-   hits_c, misses_c = run_simulation(cache_c, test_case_c, test_case_title="Test Case C: Mid-repeat blocks", filename="simulation_trace_c.txt")
-   statistics_c = calculate_statistics(len(test_case_c), hits_c, misses_c)
+  # Test Case C: Mid-repeat blocks
+  mid_repeat = [i % num_blocks for i in range(num_blocks)] * 2 + [i for i in range(num_blocks, 2 * num_blocks)] * 4
+  test_case_c = mid_repeat * 4
+  animated_trace_c = input("Do you want to animate trace for Test Case C? (yes/no): ") == "yes"
 
-   # Output
-   print("\nTest Case A Statistics (Sequential sequence):")
-   for key, value in statistics_a.items():
-       print(f"{key}: {value}")
+  # Run simulations
+  hits_a, misses_a = run_simulation(cache_a, test_case_a, animated_trace=animated_trace_a, test_case_title="Test Case A: Sequential sequence", filename="simulation_trace_a.txt")
+  statistics_a = calculate_statistics(len(test_case_a), hits_a, misses_a)
 
-   print("\nTest Case B Statistics (Random sequence):")
-   for key, value in statistics_b.items():
-       print(f"{key}: {value}")
-       
-   print("\nTest Case C Statistics (Mid-repeat blocks):")
-   for key, value in statistics_c.items():
-       print(f"{key}: {value}")
-       
+  hits_b, misses_b = run_simulation(cache_b, test_case_b, animated_trace=animated_trace_b, test_case_title="Test Case B: Random sequence", filename="simulation_trace_b.txt")
+  statistics_b = calculate_statistics(len(test_case_b), hits_b, misses_b)
+
+  hits_c, misses_c = run_simulation(cache_c, test_case_c, animated_trace=animated_trace_c, test_case_title="Test Case C: Mid-repeat blocks", filename="simulation_trace_c.txt")
+  statistics_c = calculate_statistics(len(test_case_c), hits_c, misses_c)
+
+  # Output
+  print("\nTest Case A Statistics (Sequential sequence):")
+  for key, value in statistics_a.items():
+      print(f"{key}: {value}")
+
+  print("\nTest Case B Statistics (Random sequence):")
+  for key, value in statistics_b.items():
+      print(f"{key}: {value}")
+      
+  print("\nTest Case C Statistics (Mid-repeat blocks):")
+  for key, value in statistics_c.items():
+      print(f"{key}: {value}")
+      
 if __name__ == "__main__":
-  main()
+ main()
+
