@@ -1,0 +1,506 @@
+Test Case C: Mid-repeat blocks
+==================================================
+Memory Access: 0
+Cache Result: miss
+Cache Block 0: Valid=True, Tag=0, MRU Counter=0
+Cache Block 1: Valid=False, Tag=-1, MRU Counter=0
+Cache Block 2: Valid=False, Tag=-1, MRU Counter=0
+
+==================================================
+Memory Access: 1
+Cache Result: miss
+Cache Block 0: Valid=True, Tag=0, MRU Counter=0
+Cache Block 1: Valid=True, Tag=1, MRU Counter=1
+Cache Block 2: Valid=False, Tag=-1, MRU Counter=0
+
+==================================================
+Memory Access: 2
+Cache Result: miss
+Cache Block 0: Valid=True, Tag=0, MRU Counter=0
+Cache Block 1: Valid=True, Tag=1, MRU Counter=1
+Cache Block 2: Valid=True, Tag=2, MRU Counter=2
+
+==================================================
+Memory Access: 0
+Cache Result: hit
+Cache Block 0: Valid=True, Tag=0, MRU Counter=3
+Cache Block 1: Valid=True, Tag=1, MRU Counter=1
+Cache Block 2: Valid=True, Tag=2, MRU Counter=2
+
+==================================================
+Memory Access: 1
+Cache Result: hit
+Cache Block 0: Valid=True, Tag=0, MRU Counter=3
+Cache Block 1: Valid=True, Tag=1, MRU Counter=4
+Cache Block 2: Valid=True, Tag=2, MRU Counter=2
+
+==================================================
+Memory Access: 2
+Cache Result: hit
+Cache Block 0: Valid=True, Tag=0, MRU Counter=3
+Cache Block 1: Valid=True, Tag=1, MRU Counter=4
+Cache Block 2: Valid=True, Tag=2, MRU Counter=5
+
+==================================================
+Memory Access: 3
+Cache Result: miss
+Cache Block 0: Valid=True, Tag=0, MRU Counter=3
+Cache Block 1: Valid=True, Tag=1, MRU Counter=4
+Cache Block 2: Valid=True, Tag=3, MRU Counter=6
+
+==================================================
+Memory Access: 4
+Cache Result: miss
+Cache Block 0: Valid=True, Tag=0, MRU Counter=3
+Cache Block 1: Valid=True, Tag=1, MRU Counter=4
+Cache Block 2: Valid=True, Tag=4, MRU Counter=7
+
+==================================================
+Memory Access: 5
+Cache Result: miss
+Cache Block 0: Valid=True, Tag=0, MRU Counter=3
+Cache Block 1: Valid=True, Tag=1, MRU Counter=4
+Cache Block 2: Valid=True, Tag=5, MRU Counter=8
+
+==================================================
+Memory Access: 3
+Cache Result: miss
+Cache Block 0: Valid=True, Tag=0, MRU Counter=3
+Cache Block 1: Valid=True, Tag=1, MRU Counter=4
+Cache Block 2: Valid=True, Tag=3, MRU Counter=9
+
+==================================================
+Memory Access: 4
+Cache Result: miss
+Cache Block 0: Valid=True, Tag=0, MRU Counter=3
+Cache Block 1: Valid=True, Tag=1, MRU Counter=4
+Cache Block 2: Valid=True, Tag=4, MRU Counter=10
+
+==================================================
+Memory Access: 5
+Cache Result: miss
+Cache Block 0: Valid=True, Tag=0, MRU Counter=3
+Cache Block 1: Valid=True, Tag=1, MRU Counter=4
+Cache Block 2: Valid=True, Tag=5, MRU Counter=11
+
+==================================================
+Memory Access: 3
+Cache Result: miss
+Cache Block 0: Valid=True, Tag=0, MRU Counter=3
+Cache Block 1: Valid=True, Tag=1, MRU Counter=4
+Cache Block 2: Valid=True, Tag=3, MRU Counter=12
+
+==================================================
+Memory Access: 4
+Cache Result: miss
+Cache Block 0: Valid=True, Tag=0, MRU Counter=3
+Cache Block 1: Valid=True, Tag=1, MRU Counter=4
+Cache Block 2: Valid=True, Tag=4, MRU Counter=13
+
+==================================================
+Memory Access: 5
+Cache Result: miss
+Cache Block 0: Valid=True, Tag=0, MRU Counter=3
+Cache Block 1: Valid=True, Tag=1, MRU Counter=4
+Cache Block 2: Valid=True, Tag=5, MRU Counter=14
+
+==================================================
+Memory Access: 3
+Cache Result: miss
+Cache Block 0: Valid=True, Tag=0, MRU Counter=3
+Cache Block 1: Valid=True, Tag=1, MRU Counter=4
+Cache Block 2: Valid=True, Tag=3, MRU Counter=15
+
+==================================================
+Memory Access: 4
+Cache Result: miss
+Cache Block 0: Valid=True, Tag=0, MRU Counter=3
+Cache Block 1: Valid=True, Tag=1, MRU Counter=4
+Cache Block 2: Valid=True, Tag=4, MRU Counter=16
+
+==================================================
+Memory Access: 5
+Cache Result: miss
+Cache Block 0: Valid=True, Tag=0, MRU Counter=3
+Cache Block 1: Valid=True, Tag=1, MRU Counter=4
+Cache Block 2: Valid=True, Tag=5, MRU Counter=17
+
+==================================================
+Memory Access: 0
+Cache Result: hit
+Cache Block 0: Valid=True, Tag=0, MRU Counter=18
+Cache Block 1: Valid=True, Tag=1, MRU Counter=4
+Cache Block 2: Valid=True, Tag=5, MRU Counter=17
+
+==================================================
+Memory Access: 1
+Cache Result: hit
+Cache Block 0: Valid=True, Tag=0, MRU Counter=18
+Cache Block 1: Valid=True, Tag=1, MRU Counter=19
+Cache Block 2: Valid=True, Tag=5, MRU Counter=17
+
+==================================================
+Memory Access: 2
+Cache Result: miss
+Cache Block 0: Valid=True, Tag=0, MRU Counter=18
+Cache Block 1: Valid=True, Tag=2, MRU Counter=20
+Cache Block 2: Valid=True, Tag=5, MRU Counter=17
+
+==================================================
+Memory Access: 0
+Cache Result: hit
+Cache Block 0: Valid=True, Tag=0, MRU Counter=21
+Cache Block 1: Valid=True, Tag=2, MRU Counter=20
+Cache Block 2: Valid=True, Tag=5, MRU Counter=17
+
+==================================================
+Memory Access: 1
+Cache Result: miss
+Cache Block 0: Valid=True, Tag=1, MRU Counter=22
+Cache Block 1: Valid=True, Tag=2, MRU Counter=20
+Cache Block 2: Valid=True, Tag=5, MRU Counter=17
+
+==================================================
+Memory Access: 2
+Cache Result: hit
+Cache Block 0: Valid=True, Tag=1, MRU Counter=22
+Cache Block 1: Valid=True, Tag=2, MRU Counter=23
+Cache Block 2: Valid=True, Tag=5, MRU Counter=17
+
+==================================================
+Memory Access: 3
+Cache Result: miss
+Cache Block 0: Valid=True, Tag=1, MRU Counter=22
+Cache Block 1: Valid=True, Tag=3, MRU Counter=24
+Cache Block 2: Valid=True, Tag=5, MRU Counter=17
+
+==================================================
+Memory Access: 4
+Cache Result: miss
+Cache Block 0: Valid=True, Tag=1, MRU Counter=22
+Cache Block 1: Valid=True, Tag=4, MRU Counter=25
+Cache Block 2: Valid=True, Tag=5, MRU Counter=17
+
+==================================================
+Memory Access: 5
+Cache Result: hit
+Cache Block 0: Valid=True, Tag=1, MRU Counter=22
+Cache Block 1: Valid=True, Tag=4, MRU Counter=25
+Cache Block 2: Valid=True, Tag=5, MRU Counter=26
+
+==================================================
+Memory Access: 3
+Cache Result: miss
+Cache Block 0: Valid=True, Tag=1, MRU Counter=22
+Cache Block 1: Valid=True, Tag=4, MRU Counter=25
+Cache Block 2: Valid=True, Tag=3, MRU Counter=27
+
+==================================================
+Memory Access: 4
+Cache Result: hit
+Cache Block 0: Valid=True, Tag=1, MRU Counter=22
+Cache Block 1: Valid=True, Tag=4, MRU Counter=28
+Cache Block 2: Valid=True, Tag=3, MRU Counter=27
+
+==================================================
+Memory Access: 5
+Cache Result: miss
+Cache Block 0: Valid=True, Tag=1, MRU Counter=22
+Cache Block 1: Valid=True, Tag=5, MRU Counter=29
+Cache Block 2: Valid=True, Tag=3, MRU Counter=27
+
+==================================================
+Memory Access: 3
+Cache Result: hit
+Cache Block 0: Valid=True, Tag=1, MRU Counter=22
+Cache Block 1: Valid=True, Tag=5, MRU Counter=29
+Cache Block 2: Valid=True, Tag=3, MRU Counter=30
+
+==================================================
+Memory Access: 4
+Cache Result: miss
+Cache Block 0: Valid=True, Tag=1, MRU Counter=22
+Cache Block 1: Valid=True, Tag=5, MRU Counter=29
+Cache Block 2: Valid=True, Tag=4, MRU Counter=31
+
+==================================================
+Memory Access: 5
+Cache Result: hit
+Cache Block 0: Valid=True, Tag=1, MRU Counter=22
+Cache Block 1: Valid=True, Tag=5, MRU Counter=32
+Cache Block 2: Valid=True, Tag=4, MRU Counter=31
+
+==================================================
+Memory Access: 3
+Cache Result: miss
+Cache Block 0: Valid=True, Tag=1, MRU Counter=22
+Cache Block 1: Valid=True, Tag=3, MRU Counter=33
+Cache Block 2: Valid=True, Tag=4, MRU Counter=31
+
+==================================================
+Memory Access: 4
+Cache Result: hit
+Cache Block 0: Valid=True, Tag=1, MRU Counter=22
+Cache Block 1: Valid=True, Tag=3, MRU Counter=33
+Cache Block 2: Valid=True, Tag=4, MRU Counter=34
+
+==================================================
+Memory Access: 5
+Cache Result: miss
+Cache Block 0: Valid=True, Tag=1, MRU Counter=22
+Cache Block 1: Valid=True, Tag=3, MRU Counter=33
+Cache Block 2: Valid=True, Tag=5, MRU Counter=35
+
+==================================================
+Memory Access: 0
+Cache Result: miss
+Cache Block 0: Valid=True, Tag=1, MRU Counter=22
+Cache Block 1: Valid=True, Tag=3, MRU Counter=33
+Cache Block 2: Valid=True, Tag=0, MRU Counter=36
+
+==================================================
+Memory Access: 1
+Cache Result: hit
+Cache Block 0: Valid=True, Tag=1, MRU Counter=37
+Cache Block 1: Valid=True, Tag=3, MRU Counter=33
+Cache Block 2: Valid=True, Tag=0, MRU Counter=36
+
+==================================================
+Memory Access: 2
+Cache Result: miss
+Cache Block 0: Valid=True, Tag=2, MRU Counter=38
+Cache Block 1: Valid=True, Tag=3, MRU Counter=33
+Cache Block 2: Valid=True, Tag=0, MRU Counter=36
+
+==================================================
+Memory Access: 0
+Cache Result: hit
+Cache Block 0: Valid=True, Tag=2, MRU Counter=38
+Cache Block 1: Valid=True, Tag=3, MRU Counter=33
+Cache Block 2: Valid=True, Tag=0, MRU Counter=39
+
+==================================================
+Memory Access: 1
+Cache Result: miss
+Cache Block 0: Valid=True, Tag=2, MRU Counter=38
+Cache Block 1: Valid=True, Tag=3, MRU Counter=33
+Cache Block 2: Valid=True, Tag=1, MRU Counter=40
+
+==================================================
+Memory Access: 2
+Cache Result: hit
+Cache Block 0: Valid=True, Tag=2, MRU Counter=41
+Cache Block 1: Valid=True, Tag=3, MRU Counter=33
+Cache Block 2: Valid=True, Tag=1, MRU Counter=40
+
+==================================================
+Memory Access: 3
+Cache Result: hit
+Cache Block 0: Valid=True, Tag=2, MRU Counter=41
+Cache Block 1: Valid=True, Tag=3, MRU Counter=42
+Cache Block 2: Valid=True, Tag=1, MRU Counter=40
+
+==================================================
+Memory Access: 4
+Cache Result: miss
+Cache Block 0: Valid=True, Tag=2, MRU Counter=41
+Cache Block 1: Valid=True, Tag=4, MRU Counter=43
+Cache Block 2: Valid=True, Tag=1, MRU Counter=40
+
+==================================================
+Memory Access: 5
+Cache Result: miss
+Cache Block 0: Valid=True, Tag=2, MRU Counter=41
+Cache Block 1: Valid=True, Tag=5, MRU Counter=44
+Cache Block 2: Valid=True, Tag=1, MRU Counter=40
+
+==================================================
+Memory Access: 3
+Cache Result: miss
+Cache Block 0: Valid=True, Tag=2, MRU Counter=41
+Cache Block 1: Valid=True, Tag=3, MRU Counter=45
+Cache Block 2: Valid=True, Tag=1, MRU Counter=40
+
+==================================================
+Memory Access: 4
+Cache Result: miss
+Cache Block 0: Valid=True, Tag=2, MRU Counter=41
+Cache Block 1: Valid=True, Tag=4, MRU Counter=46
+Cache Block 2: Valid=True, Tag=1, MRU Counter=40
+
+==================================================
+Memory Access: 5
+Cache Result: miss
+Cache Block 0: Valid=True, Tag=2, MRU Counter=41
+Cache Block 1: Valid=True, Tag=5, MRU Counter=47
+Cache Block 2: Valid=True, Tag=1, MRU Counter=40
+
+==================================================
+Memory Access: 3
+Cache Result: miss
+Cache Block 0: Valid=True, Tag=2, MRU Counter=41
+Cache Block 1: Valid=True, Tag=3, MRU Counter=48
+Cache Block 2: Valid=True, Tag=1, MRU Counter=40
+
+==================================================
+Memory Access: 4
+Cache Result: miss
+Cache Block 0: Valid=True, Tag=2, MRU Counter=41
+Cache Block 1: Valid=True, Tag=4, MRU Counter=49
+Cache Block 2: Valid=True, Tag=1, MRU Counter=40
+
+==================================================
+Memory Access: 5
+Cache Result: miss
+Cache Block 0: Valid=True, Tag=2, MRU Counter=41
+Cache Block 1: Valid=True, Tag=5, MRU Counter=50
+Cache Block 2: Valid=True, Tag=1, MRU Counter=40
+
+==================================================
+Memory Access: 3
+Cache Result: miss
+Cache Block 0: Valid=True, Tag=2, MRU Counter=41
+Cache Block 1: Valid=True, Tag=3, MRU Counter=51
+Cache Block 2: Valid=True, Tag=1, MRU Counter=40
+
+==================================================
+Memory Access: 4
+Cache Result: miss
+Cache Block 0: Valid=True, Tag=2, MRU Counter=41
+Cache Block 1: Valid=True, Tag=4, MRU Counter=52
+Cache Block 2: Valid=True, Tag=1, MRU Counter=40
+
+==================================================
+Memory Access: 5
+Cache Result: miss
+Cache Block 0: Valid=True, Tag=2, MRU Counter=41
+Cache Block 1: Valid=True, Tag=5, MRU Counter=53
+Cache Block 2: Valid=True, Tag=1, MRU Counter=40
+
+==================================================
+Memory Access: 0
+Cache Result: miss
+Cache Block 0: Valid=True, Tag=2, MRU Counter=41
+Cache Block 1: Valid=True, Tag=0, MRU Counter=54
+Cache Block 2: Valid=True, Tag=1, MRU Counter=40
+
+==================================================
+Memory Access: 1
+Cache Result: hit
+Cache Block 0: Valid=True, Tag=2, MRU Counter=41
+Cache Block 1: Valid=True, Tag=0, MRU Counter=54
+Cache Block 2: Valid=True, Tag=1, MRU Counter=55
+
+==================================================
+Memory Access: 2
+Cache Result: hit
+Cache Block 0: Valid=True, Tag=2, MRU Counter=56
+Cache Block 1: Valid=True, Tag=0, MRU Counter=54
+Cache Block 2: Valid=True, Tag=1, MRU Counter=55
+
+==================================================
+Memory Access: 0
+Cache Result: hit
+Cache Block 0: Valid=True, Tag=2, MRU Counter=56
+Cache Block 1: Valid=True, Tag=0, MRU Counter=57
+Cache Block 2: Valid=True, Tag=1, MRU Counter=55
+
+==================================================
+Memory Access: 1
+Cache Result: hit
+Cache Block 0: Valid=True, Tag=2, MRU Counter=56
+Cache Block 1: Valid=True, Tag=0, MRU Counter=57
+Cache Block 2: Valid=True, Tag=1, MRU Counter=58
+
+==================================================
+Memory Access: 2
+Cache Result: hit
+Cache Block 0: Valid=True, Tag=2, MRU Counter=59
+Cache Block 1: Valid=True, Tag=0, MRU Counter=57
+Cache Block 2: Valid=True, Tag=1, MRU Counter=58
+
+==================================================
+Memory Access: 3
+Cache Result: miss
+Cache Block 0: Valid=True, Tag=3, MRU Counter=60
+Cache Block 1: Valid=True, Tag=0, MRU Counter=57
+Cache Block 2: Valid=True, Tag=1, MRU Counter=58
+
+==================================================
+Memory Access: 4
+Cache Result: miss
+Cache Block 0: Valid=True, Tag=4, MRU Counter=61
+Cache Block 1: Valid=True, Tag=0, MRU Counter=57
+Cache Block 2: Valid=True, Tag=1, MRU Counter=58
+
+==================================================
+Memory Access: 5
+Cache Result: miss
+Cache Block 0: Valid=True, Tag=5, MRU Counter=62
+Cache Block 1: Valid=True, Tag=0, MRU Counter=57
+Cache Block 2: Valid=True, Tag=1, MRU Counter=58
+
+==================================================
+Memory Access: 3
+Cache Result: miss
+Cache Block 0: Valid=True, Tag=3, MRU Counter=63
+Cache Block 1: Valid=True, Tag=0, MRU Counter=57
+Cache Block 2: Valid=True, Tag=1, MRU Counter=58
+
+==================================================
+Memory Access: 4
+Cache Result: miss
+Cache Block 0: Valid=True, Tag=4, MRU Counter=64
+Cache Block 1: Valid=True, Tag=0, MRU Counter=57
+Cache Block 2: Valid=True, Tag=1, MRU Counter=58
+
+==================================================
+Memory Access: 5
+Cache Result: miss
+Cache Block 0: Valid=True, Tag=5, MRU Counter=65
+Cache Block 1: Valid=True, Tag=0, MRU Counter=57
+Cache Block 2: Valid=True, Tag=1, MRU Counter=58
+
+==================================================
+Memory Access: 3
+Cache Result: miss
+Cache Block 0: Valid=True, Tag=3, MRU Counter=66
+Cache Block 1: Valid=True, Tag=0, MRU Counter=57
+Cache Block 2: Valid=True, Tag=1, MRU Counter=58
+
+==================================================
+Memory Access: 4
+Cache Result: miss
+Cache Block 0: Valid=True, Tag=4, MRU Counter=67
+Cache Block 1: Valid=True, Tag=0, MRU Counter=57
+Cache Block 2: Valid=True, Tag=1, MRU Counter=58
+
+==================================================
+Memory Access: 5
+Cache Result: miss
+Cache Block 0: Valid=True, Tag=5, MRU Counter=68
+Cache Block 1: Valid=True, Tag=0, MRU Counter=57
+Cache Block 2: Valid=True, Tag=1, MRU Counter=58
+
+==================================================
+Memory Access: 3
+Cache Result: miss
+Cache Block 0: Valid=True, Tag=3, MRU Counter=69
+Cache Block 1: Valid=True, Tag=0, MRU Counter=57
+Cache Block 2: Valid=True, Tag=1, MRU Counter=58
+
+==================================================
+Memory Access: 4
+Cache Result: miss
+Cache Block 0: Valid=True, Tag=4, MRU Counter=70
+Cache Block 1: Valid=True, Tag=0, MRU Counter=57
+Cache Block 2: Valid=True, Tag=1, MRU Counter=58
+
+==================================================
+Memory Access: 5
+Cache Result: miss
+Cache Block 0: Valid=True, Tag=5, MRU Counter=71
+Cache Block 1: Valid=True, Tag=0, MRU Counter=57
+Cache Block 2: Valid=True, Tag=1, MRU Counter=58
+
+==================================================
