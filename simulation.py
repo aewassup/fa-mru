@@ -37,6 +37,12 @@ class Cache:
       self.mru_counter += 1
       return "miss"
   
+def generate_midblocks(num_blocks):
+   sequence = [0]
+   sequence.extend(list(range(1, num_blocks-1)) * 2)
+   sequence.extend(list(range(num_blocks-1, 2 * num_blocks)))
+   sequence *= 4
+   return sequence
   
 
 class CacheGUI:
@@ -175,8 +181,7 @@ class CacheGUI:
        elif test_case == "Test Case B":
            return random.sample(range(4 * num_blocks), 4 * num_blocks)
        elif test_case == "Test Case C":
-           mid_repeat = [i % num_blocks for i in range(num_blocks)] * 2 + [i for i in range(num_blocks, 2 * num_blocks)] * 4
-           return mid_repeat * 4
+           return generate_midblocks(num_blocks)
 
    def step(self):
        if self.current_access < len(self.memory_accesses):
