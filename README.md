@@ -50,7 +50,8 @@ The simulator also provides statistics about the cache accesses, including the t
 
 In this test case, a total of 4*2n numbers will be accessed – four (4) representing the necessary repetition of the sequence while the 2n for the cache block where the n is the memory block or user input. Through full associative cache mapping, it enables any block from the main memory to be placed in any cache block, without restriction. With the help of the MRU replacement algorithm, it keeps track of the order in which blocks are accessed. It loads the new blocks that need to be loaded into the cache and utilizes the most recently used to be replaced once there is no more space in the cache block. Meanwhile, having the sequential sequence pattern enables the cache system to access addresses without skipping anything. Given all of these, it can be said that with the help of the sequential sequence, it efficiently handles repeated access to a predictable sequence without skipping any addresses as it would prefetch sequential blocks orderly from the starting block. This would mean that the blocks can be predictably accessed again soon or repeatedly. Additionally, this optimizes the cache performance by allowing flexible block placement and leveraging the MRU replacement algorithm to retain frequently accessed blocks. Furthermore, it has a longer average memory access time than the other test case as this accesses addresses without skipping anything in a systematic order. 
 
-[insert pic here]
+![1](https://github.com/aewassup/fa-mru/assets/141651743/f3c3d5df-34ee-4638-8fdc-2900f7d6db52)
+
 
 2. Random sequence: containing 4n blocks.
 
