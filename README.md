@@ -67,4 +67,3 @@ Through full associative cache mapping, it enables any block from the main memor
 ![3](https://github.com/aewassup/fa-mru/assets/141651743/8fae31da-444b-4c29-be49-47164350df97)
 
 
-
