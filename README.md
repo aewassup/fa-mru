@@ -21,15 +21,15 @@ Cache Mapping Function = Full Associative Mapping (FA)
 Cache Replacement Algorithm = Most Recently Used (MRU)
 
 ## Terminology:
-### Full Associative Cache Mapping: Enables all main memory blocks to be mapped onto any cache block
-### Most Recently Used Replacement Algorithm: The MRU assists in identifying which cache block may be overwritten (released) when all cache blocks in the main memory blocks are already in use by replacing the most recently used block.
-### Sequential Sequence: Sequential sequence is an access pattern wherein the data is accessed in a sequential or orderly manner based on the addresses assigned to the cache block. To access a memory block, it needs to traverse through the memory addresses in a sequential manner, starting from a known point.
-### Random Sequence: Random sequence is an access pattern wherein the data can be accessed from any cache block in the main memory, unpredictably without the need to traverse through intervening addresses.
-### Mid-repeat Blocks: Mid-repeat blocks is an access pattern wherein the data is accessed starting from the middle of the cache block in the main memory.
-### Cache hit rate: Fraction of memory accesses found in the cache memory
-### Cache miss rate: Fraction of memory accesses not found in the cache.
-### Average memory access time: Derived from the formula Tavg = hC + (1 - h) * M
-### Legend:
+- Full Associative Cache Mapping: Enables all main memory blocks to be mapped onto any cache block
+- Most Recently Used Replacement Algorithm: The MRU assists in identifying which cache block may be overwritten (released) when all cache blocks in the main memory blocks are already in use by replacing the most recently used block.
+- Sequential Sequence: Sequential sequence is an access pattern wherein the data is accessed in a sequential or orderly manner based on the addresses assigned to the cache block. To access a memory block, it needs to traverse through the memory addresses in a sequential manner, starting from a known point.
+- Random Sequence: Random sequence is an access pattern wherein the data can be accessed from any cache block in the main memory, unpredictably without the need to traverse through intervening addresses.
+- Mid-repeat Blocks: Mid-repeat blocks is an access pattern wherein the data is accessed starting from the middle of the cache block in the main memory.
+- Cache hit rate: Fraction of memory accesses found in the cache memory
+- Cache miss rate: Fraction of memory accesses not found in the cache.
+- Average memory access time: Derived from the formula Tavg = hC + (1 - h) * M
+- Legend:
 h = hit rate
 C = cache access time
 M = miss penalty
