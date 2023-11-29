@@ -37,6 +37,12 @@ class Cache:
       self.mru_counter += 1
       return "miss"
   
+def generate_midblocks(num_blocks):
+   sequence = [0]
+   sequence.extend(list(range(1, num_blocks-1)) * 2)
+   sequence.extend(list(range(num_blocks-1, 2 * num_blocks)))
+   sequence *= 4
+   return sequence
   
 
 class CacheGUI:
