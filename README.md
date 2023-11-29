@@ -31,7 +31,9 @@ pip install ttkbootstrap
 - Average memory access time: Derived from the formula Tavg = hC + (1 - h) * M
 - Legend:
 h = hit rate
+
 C = cache access time
+
 M = miss penalty
 
 ## Running the Simulator
