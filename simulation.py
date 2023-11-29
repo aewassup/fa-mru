@@ -37,13 +37,6 @@ class Cache:
       self.mru_counter += 1
       return "miss"
   
-def generate_midblocks(num_blocks):
-   sequence = [0]
-   sequence.extend(list(range(1, num_blocks-1)) * 2)
-   sequence.extend(list(range(num_blocks-1, 2 * num_blocks)))
-   sequence *= 4
-   return sequence
-  
 
 class CacheGUI:
    def __init__(self):
@@ -171,33 +164,40 @@ class CacheGUI:
 
 
    def create_entries(self, num_blocks):
-       self.entries = []
-       for i in range(num_blocks):
-            header1 = tk.Label(self.root, text="Data")
-            header1.grid(row=7, column=1)
-            header2 = tk.Label(self.root, text="Counter")
-            header2.grid(row=7, column=2) 
-                
-            label = tk.Label(self.root, text=f"Cache Block {i}:")
-            label.grid(row=i+8, column=0)
-                
-            tag_entry = tk.Entry(self.root)
-            tag_entry.grid(row=i+8, column=1)
-                
-            mru_counter_entry = tk.Entry(self.root)
-            mru_counter_entry.grid(row=i+8, column=2)
-           
-            self.entries.append((tag_entry, mru_counter_entry))
+    self.entries = []
+    self.labels = [] # Create a list to store the labels
+    for i in range(num_blocks):
+        header1 = tk.Label(self.root, text="Data")
+        header1.grid(row=7, column=1)
+        self.labels.append(header1) # Add the label to the list
+
+        header2 = tk.Label(self.root, text="Counter")
+        header2.grid(row=7, column=2) 
+        self.labels.append(header2) # Add the label to the list
+
+        label = tk.Label(self.root, text=f"Cache Block {i}:")
+        label.grid(row=i+8, column=0)
+        self.labels.append(label) # Add the label to the list
+
+        tag_entry = tk.Entry(self.root)
+        tag_entry.grid(row=i+8, column=1)
+
+        mru_counter_entry = tk.Entry(self.root)
+        mru_counter_entry.grid(row=i+8, column=2)
+        
+        self.entries.append((tag_entry, mru_counter_entry)) # Store a tuple of Entry widgets in self.entries
+
 
    def update_entries(self):
-       for i, entry in enumerate(self.cache.entries):
-           tag_entry, mru_counter_entry = self.entries[i]
-           
-           tag_entry.delete(0, tk.END)
-           tag_entry.insert(0, str(entry.tag))
-           
-           mru_counter_entry.delete(0, tk.END)
-           mru_counter_entry.insert(0, str(entry.mru_counter))
+    for i, entry in enumerate(self.cache.entries):
+        tag_entry, mru_counter_entry = self.entries[i] # Unpack the tuple of Entry widgets
+
+        tag_entry.delete(0, tk.END)
+        tag_entry.insert(0, str(entry.tag))
+
+        mru_counter_entry.delete(0, tk.END)
+        mru_counter_entry.insert(0, str(entry.mru_counter))
+
 
    def run(self):
        self.root.mainloop()
@@ -303,31 +303,32 @@ class CacheGUI:
        os.startfile("cache_log.txt")
        
    def reset_simulation(self):
-        # Clear all the cache entries
-        for entry in self.entries:
-            entry[0].delete(0, tk.END)
-            entry[1].delete(0, tk.END)
+    # Clear all the cache entries
+    for entry in self.entries:
+       tag_entry, mru_counter_entry = entry
+       tag_entry.destroy()
+       mru_counter_entry.destroy()
 
-        # Clear the memory table
-        for i in self.memory_table.get_children():
-            self.memory_table.delete(i)
+    # Clear the labels
+    for label in self.labels:
+        label.config(text="") # Clear the content of the label
 
-        # Clear the statistics labels
-        self.total_accesses_label.config(text="")
-        self.hits_label.config(text="")
-        self.misses_label.config(text="")
-        self.hit_rate_label.config(text="")
-        self.miss_rate_label.config(text="")
-        self.average_mem_label.config(text="")
-        self.total_mem_label.config(text="")
+    # Clear the memory table
+    for i in self.memory_table.get_children():
+        self.memory_table.delete(i)
 
-        # Reset the input fields
-        self.num_blocks.delete(0, tk.END)
-        self.test_case.set("")
-        self.animation_type.set("")
+    # Clear the statistics labels
+    self.total_accesses_label.config(text="")
+    self.hits_label.config(text="")
+    self.misses_label.config(text="")
+    self.hit_rate_label.config(text="")
+    self.miss_rate_label.config(text="")
+    self.average_mem_label.config(text="")
+    self.total_mem_label.config(text="")
 
-        # Disable the log button
-        self.log_button.config(state='disabled')
+    # Disable the log button
+    self.log_button.config(state='disabled')
+
     
 
        
